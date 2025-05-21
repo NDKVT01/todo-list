@@ -1,0 +1,86 @@
+.list__table {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.list__header {
+  border-bottom: 17px solid transparent;
+}
+
+.list__header .list__cell {
+  text-align: left;
+  border-right: 1px solid #C4C4C4;
+  padding: 10px 20px;
+  font-weight: 400;
+}
+
+.list__header .list__cell--empty {
+  border: none;
+}
+
+.list__status-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #16191D;
+  background-color: white;
+}
+.list__status-button:hover {
+    border-color: #134EC1;
+}
+.list__status-button--checked {
+    border-color: #134EC1;
+}
+.list__status-button--checked:hover {
+    border-color: #16191D;
+}
+.list__status-icon {
+  display: flex;
+  justify-self: center;
+  margin: 0;
+}
+
+.list__cell {
+  text-align: left;
+  font-weight: 400;
+  padding: 20px;
+  width: auto;
+  white-space: nowrap;
+}
+
+.list__body {
+  border-collapse: collapse;
+}
+
+.list__row {
+  border-bottom: 1px solid #EEEBE9;
+  white-space: nowrap;
+}
+
+.list__row:hover {
+  background-color: #F6F9FF;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.list__cell--description {
+  width: 100%;
+}
+
+.list__cell--status {
+  color: #F89B11;
+  padding-right: 55px;
+}
+
+.list__cell--done {
+  color: #134EC1;
+}
+
+.list__cell--checkbox {
+  padding-left: 40px;
+}
+
+.list__empty-message {
+  text-align: center;
+  padding: 40px 0;
+}

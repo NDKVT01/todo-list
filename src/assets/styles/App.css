@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Vela Sans";
+    src: url(fonts/VelaSans-Regular.ttf);
+}
+@font-face {
+    font-family: "AGAvantGardeCyr";
+    src: url(fonts/agavantgardecyr-book.woff);
+}
+*, body {
+    margin: 0;
+}
+.main_content {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 1300px;
+    margin: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 104px;
+}
+.modal_active {
+    height: 100vh;
+    overflow-y: hidden;
+}
+h1 {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    align-self: center;
+}
+button {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+input {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 14px;
+}
+label {
+    font-family: 'AGAvantGardeCyr', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+img {
+    margin: 0 !important;
+}
