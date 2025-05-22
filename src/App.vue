@@ -4,13 +4,10 @@ import Filter from './components/Filter.vue'
 import List from './components/List.vue'
 import Modal from './components/Modal.vue'
 import { useListStore } from '@/stores/list.store.js'
-import { onMounted, onBeforeMount } from "vue";
+import { onMounted } from "vue";
 const store = useListStore()
 onMounted(() => {
   store.fetchItems()
-})
-onBeforeMount(() => {
-  store.saveItems()
 })
 </script>
 

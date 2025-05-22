@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { format } from "date-fns"
-const api_url = 'http://localhost:3000/api/'
+const api_url = 'https://json-server-2frm.onrender.com/api/'
 export const useListStore = defineStore('list', {
     state: () => ({
         title : "To do list",
@@ -9,7 +9,8 @@ export const useListStore = defineStore('list', {
         selectedFilter: 2,
         searchQuery: '',
         showModal: false,
-        newTaskDescription: ''
+        newTaskDescription: '',
+        isLoading: true,
     }),
     getters: {
         searchResult() {
@@ -32,9 +33,11 @@ export const useListStore = defineStore('list', {
             } catch (error) {
                 console.log(error)
             }
+            this.isLoading = false
         },
         async sendItem() {
             if (this.newTaskDescription.match(/\S/)) {
+                this.isLoading = true
                 const newItem = {
                 "id" : String(this.items.length),
                 "description": this.newTaskDescription.trim(),
@@ -55,6 +58,7 @@ export const useListStore = defineStore('list', {
             this.items.push(newItem)
             this.showModal = false
             this.newTaskDescription = ""
+            this.isLoading = false
         }
     },
     async saveItems(itemId) {

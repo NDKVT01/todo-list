@@ -9,7 +9,7 @@ const store = useListStore()
   <div class="list">
     <table class="list__table" v-if="store.items.length != 0">
       <thead class="list__header">
-        <tr class="list__row">
+        <tr>
           <th class="list__cell list__cell--empty"></th>
           <th class="list__cell" v-for="(column,index) in store.columns" :key="index">{{ column}}</th>
         </tr>
@@ -29,6 +29,7 @@ const store = useListStore()
         </tr>
       </tbody>
     </table>
-    <h2 class="list__empty-message" v-else>Нет активных задач</h2>
+    <h2 class="list__message" v-if="store.isLoading == false && store.items.length == 0">Нет активных задач</h2>
+    <h2 class="list__message" v-if="store.isLoading == true">Загрузка...</h2>
   </div>
 </template>

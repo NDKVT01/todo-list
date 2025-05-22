@@ -17,7 +17,7 @@ const store = useListStore()
         <label class="modal__label">Описание</label>
         <input class="modal__input" type="text" placeholder="Введите описание" v-model="store.newTaskDescription">
       </div>
-      <button class="modal__submit-button" @click="store.sendItem()">Создать</button>
+      <button class="modal__submit-button" @click="store.sendItem()" :disabled="store.isLoading">{{ store.isLoading == true ? 'Загрузка...' : 'Создать'}}</button>
     </div>
   </div>
 </template>

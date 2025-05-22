@@ -12,7 +12,7 @@ const store = useListStore()
     </div>
     <div class="filter__controls">
       <span class="filter__label">Сортировать по:</span>
-      <button class="filter__sort-button" @click="store.changeFilter(), store.saveItems()">
+      <button class="filter__sort-button" @click="store.changeFilter()">
         {{ store.columns[Math.abs(store.selectedFilter)] }}
       </button>
       <button class="filter__direction-button" @click="store.changeFilterDirection()">

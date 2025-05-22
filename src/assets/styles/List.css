@@ -10,7 +10,7 @@
 
 .list__header .list__cell {
   text-align: left;
-  border-right: 1px solid #C4C4C4;
+  border-left: 1px solid #C4C4C4;
   padding: 10px 20px;
   font-weight: 400;
 }
@@ -27,13 +27,13 @@
   background-color: white;
 }
 .list__status-button:hover {
-    border-color: #134EC1;
+  border-color: #134EC1;
 }
 .list__status-button--checked {
-    border-color: #134EC1;
+  border-color: #134EC1;
 }
 .list__status-button--checked:hover {
-    border-color: #16191D;
+  border-color: #16191D;
 }
 .list__status-icon {
   display: flex;
@@ -80,7 +80,7 @@
   padding-left: 40px;
 }
 
-.list__empty-message {
+.list__message {
   text-align: center;
   padding: 40px 0;
 }
